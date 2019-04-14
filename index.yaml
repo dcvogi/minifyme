@@ -1,0 +1,5 @@
+indexes:
+- kind: shortenedURLS
+  properties:
+  - name: urlInserted
+  - name: dateCreated

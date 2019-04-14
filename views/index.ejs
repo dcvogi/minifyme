@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <% include partials/head %>
+    <% include partials/script %>
+</head>
+
+<body>
+  <!-- LOGO -->
+  <div class="minifyme">
+    <a href="/"><img src="./images/logo.png" id="minifyme_logo" height="200px;" alt="Hi"/></a>
+  </div>
+  <!-- FORM -->
+  <div class="form">  
+    <form>
+      <label for="form-minification"></label>
+      <input type="text" class="form-minification" placeholder="Enter the URL for minification">
+    </form>
+  </div>  
+  <!-- BUTTONS -->
+  <div class= "buttons">
+    <input type="submit" value="Minify Me" id="minification-submit">
+  </div>
+  <div id="minified-container" class="form">
+      <input type="text" class="form-minification-edit" id="minify-result" value="http://minifyme.com/be3nm1nifi36" readonly>
+  </div>
+  <% include partials/footer %>
+</body>
+
+
+</html>

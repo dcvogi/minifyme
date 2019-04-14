@@ -1,0 +1,98 @@
+html {
+  font-family: 'Roboto', sans-serif;
+}
+
+a {
+  color: #36454f;
+}
+
+.minifyme #minifyme_logo {
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  clear: both;
+  padding-top: 112px;
+  padding-bottom: 20px;
+}
+
+.form {
+  text-align: center;
+}
+
+.form-minification, .form-minification-edit { 
+  width: 70%;
+  max-width: 450px;
+  line-height: 32px;
+  padding: 8px 10px;
+  border: none;
+  border-radius: 2px;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
+  height: 44px;
+  outline: none;
+}
+
+.form #form-minification {
+  padding: 0 8px;
+}
+
+.buttons {
+  text-align: center;
+  padding-top: 30px;
+  margin-bottom: 20px;
+  border-radius: 2px;
+}
+
+.buttons #minification-submit {
+  background-color: white;
+  color: black;
+  border: 1px solid;
+  font-size: 16px;
+  border-radius: 2px;
+  width: 150px;
+  height: 30px;
+  
+}
+
+.buttons #minification-submit:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 11px 50px 0 rgba(0,0,0,0.19);
+}
+
+.buttons #minification-submit {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.buttons #minification-submit:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+
+
+.buttons #minification-submit:hover:after {
+  opacity: 1;
+  right: 0;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: black;
+  text-align: center;
+  font-size: 13px;
+}
+
+#minified-container {
+    transform: scaleY(0);    
+    transform-origin: top;
+    transition: transform 0.26s ease;
+}
+
