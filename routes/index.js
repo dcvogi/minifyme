@@ -69,12 +69,10 @@ router.post('/', urlencodedParser, function (req, res, next) {
 
 router.get('/:id', function (req, res) {
     async function getDocument() {
-        const kind = 'shortenedURLS';
-        const taskKey = firestore.key([kind, req.params.id]);
-        
-        const [entity] = await firestore.get(taskKey);
-        if(entity){
-            res.redirect(301, entity.urlInserted);
+        const shortened = firestore.doc(`shortenedURLS/${req.params.id}`);
+        const document = await shortened.get();
+        if(document.exists){
+            res.redirect(301, document.data().urlInserted);
         }
         else {
             res.redirect(301, "http://www.minify-me.com/error");
